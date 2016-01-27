@@ -11,7 +11,7 @@
         Async Http Client library purpose is to allow Java applications to easily execute HTTP requests and
         asynchronously process the HTTP responses.
     </description>
-    <url>http://github.com/AsyncHttpClient/async-http-client</url>
+    <url>http://github.com/jankeesvanandel/async-http-client</url>
     <scm>
         <connection>scm:git:https://github.com/jankeesvanandel/async-http-client</connection>
         <url>https://github.com/jankeesvanandel/async-http-client</url>
