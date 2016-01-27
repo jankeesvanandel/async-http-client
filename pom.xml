@@ -5,7 +5,7 @@
     <groupId>com.ning</groupId>
     <artifactId>async-http-client</artifactId>
     <name>Asynchronous Http Client</name>
-    <version>1.9.33_custom_jankees-SNAPSHOT</version>
+    <version>1.9.33_custom_jankees</version>
     <packaging>jar</packaging>
     <description>
         Async Http Client library purpose is to allow Java applications to easily execute HTTP requests and
@@ -16,7 +16,8 @@
         <connection>scm:git:git@github.com:AsyncHttpClient/async-http-client.git</connection>
         <url>https://github.com/AsyncHttpClient/async-http-client</url>
         <developerConnection>scm:git:git@github.com:AsyncHttpClient/async-http-client.git</developerConnection>
-    </scm>
+      <tag>async-http-client-1.9.33_custom_jankees</tag>
+  </scm>
     <issueManagement>
         <system>jira</system>
         <url>https://issues.sonatype.org/browse/AHC</url>
