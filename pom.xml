@@ -9,7 +9,7 @@
     <groupId>com.ning</groupId>
     <artifactId>async-http-client</artifactId>
     <name>Asynchronous Http Client</name>
-    <version>1.9.33-SNAPSHOT</version>
+    <version>1.9.33_custom_jankees-SNAPSHOT</version>
     <packaging>jar</packaging>
     <description>
         Async Http Client library purpose is to allow Java applications to easily execute HTTP requests and
@@ -509,19 +509,15 @@
     </profiles>
     <distributionManagement>
         <repository>
-            <id>sonatype-nexus-staging</id>
-            <name>Sonatype Release</name>
-            <url>http://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+            <id>malmberg-releases</id>
+            <name>Malmberg Release</name>
+            <url>https://nexus.build.edubase.malmberg.nl/content/repositories/releases</url>
         </repository>
         <snapshotRepository>
-            <id>sonatype-nexus-snapshots</id>
-            <name>sonatype-nexus-snapshots</name>
-            <url>${distMgmtSnapshotsUrl}</url>
+            <id>malmberg-snapshots</id>
+            <name>Malmberg Snapshots</name>
+            <url>https://nexus.build.edubase.malmberg.nl/content/repositories/snapshots</url>
         </snapshotRepository>
-        <site>
-            <id>github</id>
-            <url>gitsite:git@github.com/AsyncHttpClient/async-http-client.git</url>
-        </site>
     </distributionManagement>
     <repositories>
         <repository>
@@ -531,7 +527,6 @@
     </repositories>
     <properties>
         <additionalparam>-Xdoclint:none</additionalparam>
-        <distMgmtSnapshotsUrl>http://oss.sonatype.org/content/repositories/snapshots</distMgmtSnapshotsUrl>
         <surefire.redirectTestOutputToFile>true</surefire.redirectTestOutputToFile>
         <netty.version>3.10.5.Final</netty.version>
         <grizzly.version>2.3.21</grizzly.version>

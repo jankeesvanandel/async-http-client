@@ -549,6 +549,48 @@ public class AsyncHttpClientConfig {
         }
 
         /**
+         * START OF TEMPORARY STUFFS
+         * Temporary adapter methods created by Jan-Kees to fix version issue between the
+         * Netty version used in ReactiveMongo 0.11.7 and Play 2.3.8.
+         * This fix works for the following combination:
+         * <ul>
+         *     <li>ReactiveMongo 0.11.7</li>
+         *     <li>Play 2.3.8</li>
+         *     <li>Netty 3.10.5</li>
+         * </ul>
+         */
+        public Builder setConnectionTimeoutInMs(int connectionTimeoutInMs) {
+            this.connectTimeout = connectionTimeoutInMs;
+            return this;
+        }
+
+        public Builder setIdleConnectionTimeoutInMs(int idleConnectionTimeoutInMs) {
+            this.pooledConnectionIdleTimeout = idleConnectionTimeoutInMs;
+            return this;
+        }
+
+        public Builder setRequestTimeoutInMs(int requestTimeoutInMs) {
+            this.requestTimeout = requestTimeoutInMs;
+            return this;
+        }
+
+        public Builder setFollowRedirects(boolean followRedirects) {
+            this.followRedirect = followRedirects;
+            return this;
+        }
+
+        public Builder setCompressionEnabled(boolean compressionEnabled) {
+            this.compressionEnforced = compressionEnabled;
+            return this;
+        }
+
+        public Builder setSSLEngineFactory(SSLEngineFactory sslEngineFactory) {
+            return this;
+        }
+
+        // END OF TEMPORARY STUFFS
+
+        /**
          * Set the maximum time in millisecond an {@link com.ning.http.client.ws.WebSocket} can stay idle.
          *
          * @param webSocketTimeout

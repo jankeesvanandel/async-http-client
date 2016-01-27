@@ -83,6 +83,22 @@ public class RequestBuilder extends RequestBuilderBase<RequestBuilder> {
     public RequestBuilder addQueryParam(String name, String value) {
         return super.addQueryParam(name, value);
     }
+    /**
+     * START OF TEMPORARY STUFFS
+     * Temporary adapter methods created by Jan-Kees to fix version issue between the
+     * Netty version used in ReactiveMongo 0.11.7 and Play 2.3.8.
+     * This fix works for the following combination:
+     * <ul>
+     *     <li>ReactiveMongo 0.11.7</li>
+     *     <li>Play 2.3.8</li>
+     *     <li>Netty 3.10.5</li>
+     * </ul>
+     */
+    public RequestBuilder addQueryParameter(String name, String value) {
+        return super.addQueryParam(name, value);
+    }
+
+    // END OF TEMPORARY STUFFS
 
     @Override
     public RequestBuilder addQueryParams(List<Param> queryParams) {
